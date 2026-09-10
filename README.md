@@ -1,8 +1,8 @@
-## Executive Preview
+# Jarvis - Executive Preview
 
 Jarvis helps you turn the context you choose into clear **decisions, risks, and next actions** by text or voice.
 
-### Install
+## Install
 
 If you already have Jarvis, **do not uninstall it first**.
 
@@ -20,7 +20,7 @@ If macOS blocks the installer: **System Settings -> Privacy & Security -> Open A
 
 If Jarvis asks for an OpenAI API key, create one at https://platform.openai.com/account/api-keys/create, paste it into Terminal, and press **Return**. The key may remain invisible when pasted; that is normal. Never send or screenshot your API key.
 
-### Your first 90 seconds
+## Your first 90 seconds
 
 1. Enter your name and optional role if asked. Choose **Brief** or **Detailed** answers and a voice, then click **Continue**.
 2. Click **Load included demo brief**.
@@ -30,7 +30,7 @@ If Jarvis asks for an OpenAI API key, create one at https://platform.openai.com/
 
 That's the core Jarvis loop: **bring context -> understand it -> challenge it -> decide what to do next.**
 
-### Bring your own work
+## Bring your own work
 
 Click **Choose local file** and select a small text-based document or data file. Then try:
 
@@ -38,14 +38,14 @@ Click **Choose local file** and select a small text-based document or data file.
 - **"Give me the CTO view: risks, dependencies, and next decisions."**
 - **"Turn this into a five-point action plan with priorities and owners."**
 
-### Trust and context
+## Trust and context
 
 - Your OpenAI API key is stored in **macOS Keychain**.
 - Your selected context is sent to OpenAI when you ask Jarvis a question or start voice.
 - **Remember our conversations** can keep relevant prior answers locally on this Mac and reuse them when helpful.
 - **See which app I am working in** reads only the frontmost app name and window title - **not screenshots or screen contents**.
 
-### Current preview
+## Current preview
 
 This version supports **text chat, live voice, local-file context, optional local memory, and optional app/window-title awareness**.
 
@@ -53,6 +53,6 @@ It does **not** send email, take external actions, read full screen contents, or
 
 Future published Jarvis versions should update automatically while Jarvis is running and online.
 
-### Need help?
+## Need help?
 
 **Do not uninstall Jarvis.** Send James the exact error message or a screenshot after confirming your API key is not visible.
