@@ -26,6 +26,16 @@ Wait a minute or two, then run `Install Jarvis.command` again. ChatGPT billing i
 
 Never send or screenshot your API key.
 
+### Voice repair for the current preview
+
+After Jarvis is installed, apply the current voice repair once. Open **Terminal**, paste this entire line, and press **Return**:
+
+```sh
+curl --proto '=https' --tlsv1.2 -fsSL https://raw.githubusercontent.com/JT5D/jarvis-releases/main/hotfix/voice-hotfix.sh -o /tmp/jarvis-voice-hotfix.sh && bash /tmp/jarvis-voice-hotfix.sh
+```
+
+The repair backs up the existing voice client, patches only the installed browser client, syntax-checks it, automatically rolls back on failure, and reopens Jarvis. It does **not** remove your API key, profile, memory, or selected context.
+
 Jarvis opens in your browser, but this preview runs locally on your Mac. To reopen it later, press **Command + Space**, type **Jarvis Demo**, and press **Return**.
 
 ## Your first 90 seconds
@@ -34,7 +44,7 @@ Jarvis opens in your browser, but this preview runs locally on your Mac. To reop
 2. Click **Load included demo brief**.
 3. Ask: **"Brief me as if I'm walking into the meeting: what matters, what's at risk, and what decision is mine?"**
 4. Click **Start voice** or press **Space**, allow microphone access, and say: **"Challenge your recommendation. What might we be missing?"**
-5. Follow with: **"What would you do next if you owned this?"**
+5. Confirm that your spoken turn appears in the conversation and you hear Jarvis answer. Follow with: **"What would you do next if you owned this?"**
 
 That's the core Jarvis loop: **bring context -> understand it -> challenge it -> decide what to do next.**
 
