@@ -1,7 +1,7 @@
 {
-  "version": "tony-mvp-v39",
+  "version": "tony-mvp-v40",
   "zip": "https://raw.githubusercontent.com/JT5D/jarvis-releases/main/Jarvis-Tony-MVP.zip",
-  "sha256": "afd8c42f1152a5898c1e4739a35738f2dcb59106b80b91fb6ea1b3ba7a72c9e5",
-  "commit": "929d6c847de3bfbb49fbda5ec817ddab6836ba95",
-  "publishedAt": "2026-09-05T03:36:15.779Z"
+  "sha256": "76a11c1179adba16bbc291101da52d3c2ce97307ae4f08d84ecfcd57664d0c60",
+  "commit": "e3399f003e1f175a552c321ba7ce41ef91591748",
+  "publishedAt": "2026-09-13T14:44:20.345Z"
 }
