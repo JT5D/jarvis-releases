@@ -1,78 +1,80 @@
 # Jarvis - Executive Preview
 
-Jarvis helps you turn the context you choose into clear **decisions, risks, and next actions** by text or voice.
+Jarvis is a native Mac executive and technical chief of staff: text + voice, local context and memory, screen/app awareness with permission, controlled Mac actions, and signed automatic updates.
 
-> **Release note:** this public download is the lightweight legacy Executive Preview used for Tony's current upgrade path. It is intentionally **not** labeled as the full native Jarvis client. Full screen understanding, native permissions, wake word, Google connectors, durable workflows, and the master control center ship only after the full macOS build passes its native/release verification gates.
+## Install Jarvis
 
-## Install
+**This is a one-time manual install. Future Jarvis updates install automatically.**
 
-If you already have Jarvis, **do not uninstall it first**.
+If you already have the earlier Jarvis preview, **do not uninstall it first**.
 
-1. **[Download Jarvis](https://raw.githubusercontent.com/JT5D/jarvis-releases/main/Jarvis-Tony-MVP.zip)**
-2. Open **Downloads** and unzip it if needed.
-3. Open `mvp-demo`.
-4. Hold **Control**, click `Install Jarvis.command`, and choose **Open**.
-5. The installer opens Terminal briefly. **You do not need to type commands.**
-6. If asked `Keep the saved OpenAI API key? [Y/n]`, press **Return**.
-7. Jarvis opens automatically. Confirm **OpenAI ready** and **Ready when you are.**
+1. Open the **[Jarvis 0.3.0 native release](https://github.com/JT5D/jarvis-releases/releases/tag/native-v0.3.0)**.
+2. Download **`Jarvis-0.3.0-ExecutivePreview.dmg`**.
+3. Double-click the downloaded DMG.
+4. Drag **Jarvis** into **Applications**.
+5. Open **Applications -> Jarvis**.
+6. If macOS asks whether to open Jarvis, click **Open**.
 
-If macOS blocks the installer: **System Settings -> Privacy & Security -> Open Anyway**, then try again.
+That is the full installation. You do **not** need Terminal, Homebrew, GitHub, Render, Supabase, Postgres, or any other developer setup.
 
-If Jarvis asks for an OpenAI API key, create one at https://platform.openai.com/account/api-keys/create, paste it into Terminal, and press **Return**. The key may remain invisible when pasted; that is normal.
+If macOS blocks the first launch, open **System Settings -> Privacy & Security**, click **Open Anyway** for Jarvis, then open Jarvis again.
 
-If the installer says API billing or credits are not ready, add credits here:
+## First launch
 
-**https://platform.openai.com/settings/organization/billing/overview**
+Jarvis will guide you through the permissions needed for the capabilities you choose. You can change them later in **Controls / Settings**.
 
-Wait a minute or two, then run `Install Jarvis.command` again. ChatGPT billing is separate from OpenAI API billing.
+Recommended first-time setup:
 
-Never send or screenshot your API key.
+1. Add your **OpenAI Platform API key** when Jarvis asks. The key is stored in **macOS Keychain**.
+2. Allow **Microphone** for voice.
+3. Allow **Accessibility** if you want Jarvis to control approved Mac apps.
+4. Allow **Screen Recording** if you want full-screen understanding.
+5. Leave any capability you do not want disabled. Permissions can be changed later.
 
-### Voice repair for the current preview
+If you need an OpenAI API key: https://platform.openai.com/account/api-keys/create
 
-After Jarvis is installed, apply the current voice repair once. Open **Terminal**, paste this entire line, and press **Return**:
+If the API says billing or credits are unavailable: https://platform.openai.com/settings/organization/billing/overview
 
-```sh
-curl --proto '=https' --tlsv1.2 -fsSL https://raw.githubusercontent.com/JT5D/jarvis-releases/main/hotfix/voice-hotfix.sh -o /tmp/jarvis-voice-hotfix.sh && bash /tmp/jarvis-voice-hotfix.sh
-```
+ChatGPT billing and OpenAI API billing are separate. Never send or screenshot your API key.
 
-The repair backs up the existing voice client, patches only the installed browser client, syntax-checks it, automatically rolls back on failure, and reopens Jarvis. It does **not** remove your API key, profile, memory, or selected context.
+## Your first two minutes
 
-Jarvis opens in your browser, but this preview runs locally on your Mac. To reopen it later, press **Command + Space**, type **Jarvis Demo**, and press **Return**.
+Try these in order:
 
-## Your first 90 seconds
+- **"What can you do?"**
+- **"Brief me on what I'm working on right now."**
+- **"Challenge my current plan. What might I be missing?"**
+- **"What should I do next?"**
 
-1. Enter your name and optional role if asked. Choose **Brief** or **Detailed** answers and a voice, then click **Continue**.
-2. Click **Load included demo brief**.
-3. Ask: **"Brief me as if I'm walking into the meeting: what matters, what's at risk, and what decision is mine?"**
-4. Click **Start voice** or press **Space**, allow microphone access, and say: **"Challenge your recommendation. What might we be missing?"**
-5. Confirm that your spoken turn appears in the conversation and you hear Jarvis answer. Follow with: **"What would you do next if you owned this?"**
+For a client/demo session, you can also tell Jarvis what role or scenario to use and ask it to explain what it is doing as the workflow unfolds.
 
-That's the core Jarvis loop: **bring context -> understand it -> challenge it -> decide what to do next.**
+## Automatic updates
 
-## Bring your own work
+Jarvis checks the signed native update channel after launch and periodically while it is running.
 
-Click **Choose local file** and select a small text-based document or data file. Then try:
+Updates are accepted only after Jarvis verifies the signed release manifest, download checksum, app identity, Apple Developer Team identity, and macOS Gatekeeper approval. A newly installed update must also mark itself healthy or Jarvis rolls back to the previous app.
 
-- **"What are the three things I need to know before this meeting?"**
-- **"Give me the CTO view: risks, dependencies, and next decisions."**
-- **"Turn this into a five-point action plan with priorities and owners."**
+**James and Tony each need this one native 0.3.0 install because the earlier v39 preview used a different update key. After this install, future native releases use the new Jarvis signing key and update automatically.**
 
-## Trust and context
+You can see the installed version and update status inside **Jarvis -> Controls -> Version & updates**.
 
-- Your OpenAI API key is stored in **macOS Keychain**.
-- Your selected context is sent to OpenAI when you ask Jarvis a question or start voice.
-- **Remember our conversations** can keep relevant prior answers locally on this Mac and reuse them when helpful.
-- **See which app I am working in** reads only the frontmost app name and window title - **not screenshots or screen contents**.
+## Reinstalling or upgrading manually
 
-## Current preview
+Normally you should not need to reinstall. If James sends you a newer DMG manually:
 
-This version supports **text chat, live voice, local-file context, optional local memory, and optional app/window-title awareness**.
+1. Quit Jarvis.
+2. Open the new DMG.
+3. Drag Jarvis into **Applications** and choose **Replace** if macOS asks.
+4. Open Jarvis again.
 
-It does **not** send email, take external actions, read full screen contents, or connect to Gmail or Calendar yet.
-
-Future published Jarvis versions should update automatically while Jarvis is running and online.
+Do **not** uninstall first. Your local Jarvis data and Keychain API key are separate from the app bundle.
 
 ## Need help?
 
-**Do not uninstall Jarvis.** Send James the exact error message or a screenshot after confirming your API key is not visible.
+Send James a screenshot of the exact message you see. Make sure your API key is not visible in the screenshot.
+
+---
+
+### Release integrity
+
+Native releases are Developer ID signed, Apple-notarized, Gatekeeper-verified, SHA-256 hashed, and published with a signed native update manifest and SBOM. The current update manifest is published at `native/manifest.json` in this repository.
