@@ -2,6 +2,8 @@
 
 Jarvis helps you turn the context you choose into clear **decisions, risks, and next actions** by text or voice.
 
+> **Release note:** this public download is the lightweight legacy Executive Preview used for Tony's current upgrade path. It is intentionally **not** labeled as the full native Jarvis client. Full screen understanding, native permissions, wake word, Google connectors, durable workflows, and the master control center ship only after the full macOS build passes its native/release verification gates.
+
 ## Install
 
 If you already have Jarvis, **do not uninstall it first**.
