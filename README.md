@@ -2,7 +2,7 @@
 
 Jarvis is a native Mac executive and technical chief of staff with text + voice, local context and memory, screen/app awareness with permission, controlled Mac actions, and signed automatic updates.
 
-> **Important:** Native build **0.3.0 (3001) is superseded and should not be installed.** Its signed/notarized app is missing the embedded web workspace required at startup, so it cannot reach the automatic updater. A corrected **0.3.1 (3002)** build is being verified against the final packaged app and DMG before publication. Wait for 0.3.1 or newer.
+> **Important:** Native build **0.3.0 (3001) is superseded and must not be installed.** Its signed/notarized app is missing the embedded Web workspace required at startup, so it cannot reach the automatic updater. Install only a verified **0.3.1 (3002) or newer** release. If the releases page does not yet show 0.3.1 or newer, wait; do not fall back to 0.3.0.
 
 ## Install Jarvis
 
@@ -10,15 +10,15 @@ Jarvis is a native Mac executive and technical chief of staff with text + voice,
 
 **This is a one-time manual install. Future healthy Jarvis releases update automatically.**
 
-If you already have an earlier Jarvis preview, **do not uninstall it first**. Install the corrected 0.3.1-or-newer DMG over the existing app when it is published.
+If you already have an earlier Jarvis preview, **do not uninstall it first**. Install the newest verified 0.3.1-or-newer DMG over the existing app.
 
 ### 1. Download
 
-Open the releases page and use the newest verified release **newer than 0.3.0**:
+Open the releases page and use the newest verified release **0.3.1 or newer**:
 
 https://github.com/JT5D/jarvis-releases/releases
 
-Download the asset named like:
+Download the asset named:
 
 `Jarvis-<version>-ExecutivePreview.dmg`
 
@@ -26,7 +26,7 @@ You only need the `.dmg` file for a normal installation. The `.zip`, `.sha256`, 
 
 ### 2. Install
 
-1. Double-click the corrected `Jarvis-<version>-ExecutivePreview.dmg`.
+1. Double-click `Jarvis-<version>-ExecutivePreview.dmg`.
 2. Drag **Jarvis** into **Applications**.
 3. Choose **Replace** if macOS asks because an earlier preview is already installed.
 4. Open **Applications -> Jarvis**.
@@ -56,7 +56,7 @@ ChatGPT billing and OpenAI API billing are separate. Never send or screenshot yo
 
 ## Confirm the install
 
-Open **Jarvis -> Controls -> Version & updates** and confirm that **Installed** and **Latest seen** match the corrected release you installed and that update status is healthy.
+A healthy corrected build must get past the startup screen and reach the actual Jarvis setup/workspace UI. Then open **Jarvis -> Controls -> Version & updates** and confirm that **Installed** and **Latest seen** match the release you installed and that update status is healthy.
 
 ## Your first two minutes
 
@@ -71,7 +71,7 @@ For a client/demo session, tell Jarvis what role or scenario to use and ask it t
 
 ## Automatic updates
 
-Jarvis checks the signed native update channel after launch and periodically while running.
+Jarvis checks the signed native update channel after a healthy launch and periodically while running.
 
 Updates are accepted only after Jarvis verifies the signed release manifest, download checksum, app identity, Apple Developer Team identity, and macOS Gatekeeper approval. A newly installed update must also mark itself healthy or Jarvis rolls back to the previous app.
 
@@ -96,4 +96,4 @@ Send James a screenshot of the exact message you see, with any API key hidden.
 
 ### Release integrity
 
-Native releases are Developer ID signed, Apple-notarized, Gatekeeper-verified, SHA-256 hashed, and published with a signed native update manifest and SBOM. Corrected releases also run browser and embedded-API acceptance tests against the exact notarized DMG before publication. The current update manifest and detached signature are in `native/manifest.json` and `native/manifest.json.sig` in this repository.
+Native releases are Developer ID signed, Apple-notarized, Gatekeeper-verified, SHA-256 hashed, and published with a signed native update manifest and SBOM. Corrected releases also run browser/native-bridge and embedded-API acceptance tests against the exact packaged Web bundle, automatic-update ZIP, and final notarized DMG before publication. The current update manifest and detached signature are in `native/manifest.json` and `native/manifest.json.sig` in this repository.
