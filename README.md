@@ -14,11 +14,19 @@ If you already have Jarvis, **do not uninstall it first**.
 6. If asked `Keep the saved OpenAI API key? [Y/n]`, press **Return**.
 7. Jarvis opens automatically. Confirm **OpenAI ready** and **Ready when you are.**
 
-Jarvis opens in your browser, but this preview runs locally on your Mac. To reopen it later, press **Command + Space**, type **Jarvis Demo**, and press **Return**.
-
 If macOS blocks the installer: **System Settings -> Privacy & Security -> Open Anyway**, then try again.
 
-If Jarvis asks for an OpenAI API key, create one at https://platform.openai.com/account/api-keys/create, paste it into Terminal, and press **Return**. The key may remain invisible when pasted; that is normal. Never send or screenshot your API key.
+If Jarvis asks for an OpenAI API key, create one at https://platform.openai.com/account/api-keys/create, paste it into Terminal, and press **Return**. The key may remain invisible when pasted; that is normal.
+
+If the installer says API billing or credits are not ready, add credits here:
+
+**https://platform.openai.com/settings/organization/billing/overview**
+
+Wait a minute or two, then run `Install Jarvis.command` again. ChatGPT billing is separate from OpenAI API billing.
+
+Never send or screenshot your API key.
+
+Jarvis opens in your browser, but this preview runs locally on your Mac. To reopen it later, press **Command + Space**, type **Jarvis Demo**, and press **Return**.
 
 ## Your first 90 seconds
 
