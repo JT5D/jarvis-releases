@@ -17,12 +17,12 @@ Jarvis walks you through it, one screen at a time: the OpenAI key your admin gav
 permission with the reason it is needed, whether to start Jarvis when you log in, what Jarvis sends
 your admin, and a quick "Hey Jarvis" test. You can skip a permission and turn it on later.
 
-| Permission         | Why                                                                 |
-| ------------------ | ------------------------------------------------------------------- |
-| Microphone         | to hear you while you talk to Jarvis                                |
-| Speech recognition | to notice "Hey Jarvis" — your Mac does this itself                  |
-| Screen recording   | to read the window you ask about; the picture never leaves your Mac |
-| Accessibility      | to read selected text and to act in apps you approve                |
+| Permission         | Why                                                             |
+| ------------------ | --------------------------------------------------------------- |
+| Microphone         | to hear you while you talk to Jarvis                            |
+| Speech recognition | to notice "Hey Jarvis" — your Mac does this itself              |
+| Screen recording   | optional: only if you turn on "Also read my screen as an image" |
+| Accessibility      | to read the app you are in, and to act in apps when you say so  |
 
 If Jarvis needs a permission it does not have, it opens the right place in System Settings for you;
 switch Jarvis on there. Settings › _Your Mac lets Jarvis use_ shows each one and its reason.
