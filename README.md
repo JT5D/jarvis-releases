@@ -24,8 +24,17 @@ your admin, and a quick "Hey Jarvis" test. You can skip a permission and turn it
 | Screen recording   | to read the window you ask about; the picture never leaves your Mac |
 | Accessibility      | to read selected text and to act in apps you approve                |
 
-If Jarvis needs a permission it does not have, it tells you which one and offers to open the right
-place in System Settings.
+If Jarvis needs a permission it does not have, it opens the right place in System Settings for you;
+switch Jarvis on there. Settings › _Your Mac lets Jarvis use_ shows each one and its reason.
+
+## What Jarvis does on its own, and what it asks first
+
+- **On its own** (switches in Settings): listen for "Hey Jarvis", look at your screen when you ask,
+  switch to an app when you ask, start at login, send device health to your admin.
+- **Asks first:** pressing a button, choosing a menu item or typing in an app. Say "yes" or press
+  Approve; say "always" to stop asking for presses in that app. Typing always asks.
+- **Never:** password managers, Keychain, sending email or messages for you.
+- Every choice is also in one file you can edit: Settings › Show settings file.
 
 ## Using Jarvis
 
