@@ -1,7 +1,7 @@
 # Jarvis for Mac
 
-Say **"Hey Jarvis"**, ask about what you are working on, and hear the answer. Anything that would
-change something waits for your approval.
+Say **"Hey Jarvis"**, ask about what you are working on, and hear the answer. Anything that sends,
+deletes, buys or posts waits for your approval.
 
 ## Install
 
@@ -17,12 +17,12 @@ Jarvis walks you through it, one screen at a time: the OpenAI key your admin gav
 permission with the reason it is needed, whether to start Jarvis when you log in, what Jarvis sends
 your admin, and a quick "Hey Jarvis" test. You can skip a permission and turn it on later.
 
-| Permission         | Why                                                             |
-| ------------------ | --------------------------------------------------------------- |
-| Microphone         | to hear you while you talk to Jarvis                            |
-| Speech recognition | to notice "Hey Jarvis" — your Mac does this itself              |
-| Screen recording   | optional: only if you turn on "Also read my screen as an image" |
-| Accessibility      | to read the app you are in, and to act in apps when you say so  |
+| Permission         | Why                                                            |
+| ------------------ | -------------------------------------------------------------- |
+| Microphone         | to hear you while you talk to Jarvis                           |
+| Speech recognition | to notice "Hey Jarvis" — your Mac does this itself             |
+| Screen recording   | for Meeting mode, or if you opt into screen-image context      |
+| Accessibility      | to read the app you are in, and to act in apps when you say so |
 
 If Jarvis needs a permission it does not have, it opens the right place in System Settings for you;
 switch Jarvis on there. Settings › _Your Mac lets Jarvis use_ shows each one and its reason.
@@ -31,8 +31,8 @@ switch Jarvis on there. Settings › _Your Mac lets Jarvis use_ shows each one a
 
 - **On its own** (switches in Settings): listen for "Hey Jarvis", look at your screen when you ask,
   switch to an app when you ask, start at login, send device health to your admin.
-- **Asks first:** pressing a button, choosing a menu item or typing in an app. Say "yes" or press
-  Approve; say "always" to stop asking for presses in that app. Typing always asks.
+- **Asks first:** anything that sends, deletes, buys or posts. Safe presses, menu choices and typing
+  can run directly when **Ask only before sending, deleting, buying or posting** is on (the default).
 - **Never:** password managers, Keychain, sending email or messages for you.
 - Every choice is also in one file you can edit: Settings › Show settings file.
 
@@ -40,6 +40,11 @@ switch Jarvis on there. Settings › _Your Mac lets Jarvis use_ shows each one a
 
 - Say **"Hey Jarvis"**, then ask — for example "what am I working on?" or "summarize this page".
 - Or click the waveform icon in the menu bar, or press **⌘⇧J**, and type.
+- Click **Open full workspace** for Today, Meeting, Projects, Workflows, Memory, Artifacts, Activity
+  and Settings. Click **Return to compact Jarvis** when you want the small voice panel again.
+- In **Meeting**, Jarvis stays silent, transcribes on your Mac and shows only cards it can tie to the
+  transcript. The first use may ask for Screen & System Audio Recording. Jarvis does not keep meeting
+  audio or video.
 - A small panel shows one word for what Jarvis is doing: idle, listening, thinking, acting, speaking,
   permission needed, offline or error. **Acting** means Jarvis is waiting for you to approve or deny.
 - 👍 / 👎 after an answer tells your admin what works.
