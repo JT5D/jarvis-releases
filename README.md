@@ -1,69 +1,62 @@
 # Jarvis for Mac
 
-Say **"Hey Jarvis"**, ask about what you are working on, and hear the answer. Anything that sends,
-deletes, buys or posts waits for your approval.
+**Testing release: 0.3.25 (3026), macOS 15 or later.**
 
-## Install
+[Download Jarvis 0.3.25](https://github.com/JT5D/jarvis-releases/releases/download/native-v0.3.25/Jarvis-0.3.25-ExecutivePreview.dmg)
+· [Release notes and checksums](https://github.com/JT5D/jarvis-releases/releases/tag/native-v0.3.25)
 
-- **Already using the Jarvis demo?** Nothing to do. Your Jarvis moves itself to the Mac app, with
-  your key, settings and conversations, when your admin turns that on.
-- **New install:** open the [latest release](https://github.com/JT5D/jarvis-releases/releases), download
-  the file ending in `.dmg`, open it, drag **Jarvis** into **Applications**, and open Jarvis.
-  Requires macOS 15 or later.
+## Install or update
 
-## First launch (a few minutes)
+1. Quit any running Jarvis app, including the older Jarvis demo.
+2. Download and open the DMG above.
+3. Drag **Jarvis** into **Applications**. If prompted, choose **Replace**.
+4. Open **Jarvis from Applications**, then eject the DMG.
+5. In **Controls → Version & updates**, confirm **0.3.25 (3026)**.
 
-Jarvis walks you through it, one screen at a time: the OpenAI key your admin gave you, then each
-permission with the reason it is needed, whether to start Jarvis when you log in, what Jarvis sends
-your admin, and a quick "Hey Jarvis" test. You can skip a permission and turn it on later.
+**Do not uninstall first.** Replacing the application preserves existing Jarvis data, settings and
+Keychain credentials. Jarvis's **Uninstall** command removes its data and credentials and is only
+for removing Jarvis completely. Do not delete Jarvis's Application Support folders to update.
 
-| Permission         | Why                                                            |
-| ------------------ | -------------------------------------------------------------- |
-| Microphone         | to hear you while you talk to Jarvis                           |
-| Speech recognition | to notice "Hey Jarvis" — your Mac does this itself             |
-| Screen recording   | for Meeting mode, or if you opt into screen-image context      |
-| Accessibility      | to read the app you are in, and to act in apps when you say so |
+Legacy demo users need this manual native-app install; do not wait for the demo to migrate itself.
+Keep the old demo closed and disable its start-at-login option so both apps do not listen together.
+The native app imports supported legacy data; retain existing data until you have checked it.
 
-If Jarvis needs a permission it does not have, it opens the right place in System Settings for you;
-switch Jarvis on there. Settings › _Your Mac lets Jarvis use_ shows each one and its reason.
+## First launch
 
-## What Jarvis does on its own, and what it asks first
+Follow the setup screens. Each tester needs their own configured, funded model account or an
+approved key supplied by their administrator. Keys from the release Mac are **not bundled**.
+OpenAI is primary; configured Gemini is the fallback. Controls includes Gemini configuration.
+A saved key alone does not prove available credits: complete the first-answer check.
 
-- **On its own** (switches in Settings): listen for "Hey Jarvis", look at your screen when you ask,
-  switch to an app when you ask, start at login, send device health to your admin.
-- **Asks first:** anything that sends, deletes, buys or posts. Safe presses, menu choices and typing
-  can run directly when **Ask only before sending, deleting, buying or posting** is on (the default).
-- **Never:** password managers, Keychain, sending email or messages for you.
-- Every choice is also in one file you can edit: Settings › Show settings file.
+Allow Microphone and Speech Recognition for voice. Accessibility enables permitted app reading
+and control. Screen & System Audio Recording is needed for meeting capture and screen-image
+context. Skipped permissions can be enabled later in System Settings.
 
-## Using Jarvis
+## What to test
 
-- Say **"Hey Jarvis"**, then ask — for example "what am I working on?" or "summarize this page".
-- Or click the waveform icon in the menu bar, or press **⌘⇧J**, and type.
-- Click **Open full workspace** for Today, Meeting, Projects, Workflows, Memory, Artifacts, Activity
-  and Settings. Click **Return to compact Jarvis** when you want the small voice panel again.
-- In **Meeting**, Jarvis stays silent, transcribes on your Mac and shows only cards it can tie to the
-  transcript. The first use may ask for Screen & System Audio Recording. Jarvis does not keep meeting
-  audio or video.
-- A small panel shows one word for what Jarvis is doing: idle, listening, thinking, acting, speaking,
-  permission needed, offline or error. **Acting** means Jarvis is waiting for you to approve or deny.
-- 👍 / 👎 after an answer tells your admin what works.
+- Say **“Hey Jarvis”**, ask a short question, and check that the full question and reply appear.
+- Open the full workspace and check your saved conversations, preferences and artifacts.
+- Voice pauses while Zoom, Teams, FaceTime or Webex is open, or browser/calling-app audio is active.
+  Quit dedicated meeting apps after the call to resume voice. Browser music/video also pauses voice.
+  Jarvis's own meeting mode blocks conversational wake and replies; text remains available.
+- Check **Controls → Version & updates** for the installed version.
 
-Not yet: reading or sending email and calendar. Jarvis says so rather than guessing.
+This release fixes meeting interference paths and voice startup/fallback defects. Live voice
+latency, interruption recovery and muted/listen-only calls in every browser still need acceptance.
+It is a testing preview, not an unattended client-readiness claim. Email attachments, multiple Gmail
+accounts and complete Gmail OAuth setup remain incomplete. Jarvis never sends email or messages
+on your behalf.
 
-## What leaves your Mac
+## Privacy and updates
 
-| Where                  | What                                                                                                                           | When                     |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------ |
-| OpenAI                 | your voice and typed questions, and — only when you ask about your screen — the text read from it                              | while you talk to Jarvis |
-| Your admin             | device health: Jarvis version, Mac model, macOS, permissions, speed — never what you say, see or type (switch off in Settings) | launch and once a day    |
-| This page's repository | a check for updates                                                                                                            | every 6 hours            |
+Configured OpenAI or Gemini receives voice/questions and context supplied for the task. Local
+conversation data and credentials remain on your Mac; credentials are stored in Keychain.
+Optional diagnostic reporting sends device/health information, not conversation text. Public GitHub
+hosts the installer and signed update feed. Native Jarvis checks for signed updates after launch
+and periodically, installs when idle and reopens itself.
 
-## Updates, help and uninstall
+## Help or removal
 
-- **Updates** install themselves when Jarvis is idle, never mid-conversation, and Jarvis reopens
-  in a few seconds; Settings › Updates shows your version.
-- **Something wrong?** Settings › Send diagnostics sends your admin what they need to help (no
-  conversations).
-- **Uninstall:** Settings › Uninstall Jarvis. Jarvis's folders go to the Trash; your own files are
-  never touched.
+Use Controls/Settings diagnostics when reporting a problem; include the installed version and what
+happened. Do not include API keys. To remove Jarvis completely, use **Uninstall Jarvis** in Settings;
+this removes Jarvis data and credentials. Uninstall is never a prerequisite for an update.
