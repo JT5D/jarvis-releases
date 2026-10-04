@@ -2,14 +2,14 @@
   "schemaVersion": "1.0",
   "product": "Jarvis",
   "channel": "executive-preview",
-  "version": "0.3.60",
-  "build": 3061,
-  "commit": "22a9954b71b2c9628b5307fe2ea2eb4642951557",
-  "zip": "https://github.com/JT5D/jarvis-releases/releases/download/native-v0.3.60/Jarvis-0.3.60.app.zip",
-  "sha256": "d3863fd4afa49d50efab3f5fa9272558c52806628b6dbc2d8af25c476edc7551",
-  "dmg": "https://github.com/JT5D/jarvis-releases/releases/download/native-v0.3.60/Jarvis-0.3.60-ExecutivePreview.dmg",
-  "dmgSha256": "2097bd9ed89ecd3207a8082a3235883426a5bb49dc865f90a383c368dce08e41",
+  "version": "0.3.62",
+  "build": 3063,
+  "commit": "2a719175adb8cc3c42cef7144b8162b278a0305e",
+  "zip": "https://github.com/JT5D/jarvis-releases/releases/download/native-v0.3.62/Jarvis-0.3.62.app.zip",
+  "sha256": "dccad149a4a27fe267bb4c2eb79816a3b914b14954c975167996f9e39ab72f32",
+  "dmg": "https://github.com/JT5D/jarvis-releases/releases/download/native-v0.3.62/Jarvis-0.3.62-ExecutivePreview.dmg",
+  "dmgSha256": "a3a3b27605b98fd1ec279f5e6d96570e4f824e19e8cb93cb5191634df319ac3b",
   "minimumMacOS": "15.0",
   "architecture": "local-first",
-  "publishedAt": "2026-10-04T05:13:34.959Z"
+  "publishedAt": "2026-10-04T06:00:53.236Z"
 }
